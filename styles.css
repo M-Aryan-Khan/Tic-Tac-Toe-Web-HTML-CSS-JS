@@ -1,0 +1,232 @@
+*{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: rgba(26,42,51,255);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-top: 2vmin;
+  flex-wrap: wrap;
+}
+
+.title-container {
+  background: rgba(31,54,65,255);;
+  height: 12vmin;
+  width: 500px;
+  border: 5px ridge #f2b137;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartoon-title {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 3.8rem;
+  letter-spacing: 5px;
+  margin: 10px 0;
+  padding: 20px;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  border: none;
+  animation: colorChange 1s infinite alternate;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  margin: 10px 0;
+  padding: 20px;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  border: none;
+  animation: colorChangeTac 1s infinite alternate;
+}
+
+@keyframes colorChangeTac {
+  0% {
+    color: #7E2553;
+  }
+
+  100% {
+    color: #FF004D;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #FF004D;
+  }
+
+  100% {
+    color: #7E2553;
+  }
+}
+
+.center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:5rem;
+}
+
+.board{
+  border:none;
+  border-radius: 0.75rem;
+  margin-top: 3rem;
+  width: 23rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.62rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.click{
+  border:none;
+  border-radius: 0.75rem;
+  height: 7rem;
+  width: 7rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.25rem;
+  background: rgba(31,54,65,255);
+  box-shadow: 0 10px 10px -5px rgba(17,28,30,255);
+  font-size: 0px;
+}
+
+.click:hover{
+  background: rgb(73, 112, 38);
+}
+
+.start {
+  margin-top: 3%;
+  width: 11rem;
+  height: 5rem;
+  background-color: #a8bfc9;
+  border-radius: 100px;
+  box-shadow: rgba(150, 66, 45, .2) 0 -25px 18px -14px inset, rgba(150, 66, 45, .15) 0 1px 2px, rgba(150, 66, 45, .15) 0 2px 4px, rgba(150, 66, 45, .15) 0 4px 8px, rgba(150, 66, 45, .15) 0 8px 16px, rgba(150, 66, 45, .15) 0 16px 32px;
+  color: #232f33;
+  cursor: pointer;
+  text-align: center;
+  transition: all 350ms;
+  font-size: 4.5vmin;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+}
+
+.start:hover {
+  box-shadow: rgba(150, 66, 45, 0.35) 0 -25px 18px -14px inset, rgba(150, 66, 45, .25) 0 1px 2px, rgba(150, 66, 45, .25) 0 2px 4px, rgba(150, 66, 45, .25) 0 4px 8px, rgba(150, 66, 45, .25) 0 8px 16px, rgba(150, 66, 45, .25) 0 16px 32px;
+  transform: scale(1.15);
+}
+.images{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: aliceblue;
+  gap:1.9rem;
+}
+
+.player{
+  height: 120px;
+  width: auto;
+}
+.VS{
+  height: 80px;
+  width: auto;
+}
+.player1, .player2{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.box1,.box2, .draw-box{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#p1{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 10px solid green;
+  visibility: visible;
+}
+#p2{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 10px solid green;
+  visibility: hidden;
+}
+.p1,.p2,.p3{
+  color: #232f33;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.p1h, .p2h,.p3h{
+  font-size: 1rem;
+}
+.box1{
+  height: 4rem;
+  background-color: #31c3bd;
+  border-radius: 10px;
+}
+.box2{
+  height: 4rem;
+  background-color: #f2b137;
+  border-radius: 10px;
+}
+.draw-box{
+  margin-top: 5rem;
+  height: 4rem;
+  background-color: #a8bfc9;
+  border-radius: 10px;
+}
+#koMessage {
+  font-size: 48px;
+  color: red;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: fadeInOut 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  text-shadow: 2px 2px 4px rgba(191, 255, 0, 0.5);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+.hidden {
+  display: none;
+}
